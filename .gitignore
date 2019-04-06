@@ -1,2 +1,3 @@
 server.py
 .vscode/launch.json
+*.xcf

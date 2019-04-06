@@ -23,12 +23,17 @@ function navbarControl(){
     let nav = document.getElementById('nav-bar-container');
     if (nav.dataset.navState == 'closed'){
         nav.dataset.navState = 'open';
+        pos_x = window.pageXOffset || document.documentElement.scrollLeft;
+        pos_y = window.pageYOffset || document.documentElement.scrollTop;
         document.getElementById('dim-container').classList.add('dim');
+        document.body.style.top = `-${pos_y}px`;
         document.body.classList.add('no-scroll');
     }else{
         nav.dataset.navState = 'closed';
         document.getElementById('dim-container').classList.remove('dim');
+        document.body.style.top = '';
         document.body.classList.remove('no-scroll');
+        window.scrollTo(pos_x, pos_y);
     }
 }
 

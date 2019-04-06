@@ -1,0 +1,10 @@
+If you have cookies enabled, you can save your spot in the story. Click "Save Game", then when you return to the site, click "Load Game" to return to where you were.
+Jeżeli masz odblokowane ciasteczka, możesz zapisać swój postęp gry. Naciśnij "Zapisz Grę", a gdy wrócisz na stronę naciśnij "Wczytaj Grę", aby powrócić tam, gdzie skończyłeś/skończyłaś.
+
+If you have cookies enabled, click this to automatically save your spot in the story wherever you go! When you return to the site later, it will automatically take you to where you left off. Pretty neat! 
+
+If this mode ever gets annoying though, remember you can just delete the cookies by clicking "Delete Game Data".
+
+Jeżeli masz odblokowane ciasteczka, kliknij w "Auto Zapis!", aby automatycznie zapisywać swój postęp w grze.
+
+Jeżeli nie chcesz już automatycznie zapisywać swojego postępu, naciśnij "Usuń Dane Gry".
