@@ -1,3 +1,5 @@
+@font-face { font-family: Helvetica; font-display: swap; }
+
 header, section, footer, aside, nav, main, article, figure {
     display: block; 
 }
