@@ -60,9 +60,11 @@ ready(function(){
     document.getElementById('in-nav-btn').addEventListener('click', navbarControl, false);
     document.getElementById('dim-container').addEventListener('click', navbarControl, false);
 
-    document.getElementById('game-nav-btn').addEventListener('click', gameNavbarControl, false);
-    document.getElementById('in-game-nav-btn').addEventListener('click', gameNavbarControl, false);
-    document.getElementById('dim-game-container').addEventListener('click', gameNavbarControl, false);
+    if (document.getElementById('game-nav-btn')){
+        document.getElementById('game-nav-btn').addEventListener('click', gameNavbarControl, false);
+        document.getElementById('in-game-nav-btn').addEventListener('click', gameNavbarControl, false);
+        document.getElementById('dim-game-container').addEventListener('click', gameNavbarControl, false);
+    }
 });
 
 ready(function(){
