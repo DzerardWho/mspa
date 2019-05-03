@@ -1,0 +1,72 @@
+<link rel="stylesheet" href="style1.css">
+<p>Co dostał do wygenerowania:</p>
+<pre style="background-color: lightgray"><code>testtesttse
+&lt;jade: test&gt;
+test &lt;jade &lt;style="color: #c4118e; font-size: 30px;"&gt;, id&lt;Jade: &gt;: test
+&lt;url&lt;http://www.google.pl&gt;&lt;style="color: #11c47f"&gt;:Google&gt;
+&lt;url&lt;http://www.google.pl&gt;:&gt;
+&lt;img&lt;width="200"&gt;&lt;height="100"&gt;:madrala.png&gt;
+&lt;url&lt;https://homestuckproject.pl&gt;:&lt;img:trollcool.gif&gt;&gt;&gt;
+&lt;def&lt;john&gt;: to jeszcze w żaden sposób nie oddziałowuje na resztę&gt;
+&lt;html:&lt;h1&gt;TEST&lt;/h1&gt;//&gt;/&gt;
+&lt;dave: &lt;john, id&lt;&gt;: f\&lt;&lt;rose: y u play baby game y yu no shcut&gt;\&gt;de
+
+ts&gt;&gt;
+&lt;scratch: testtestets&gt;</code></pre>
+
+
+<p>Co wypluwa:</p>
+<pre style="background-color: lightgray"><code>testtesttse
+&lt;br&gt;
+&lt;span class=&quot;jade&quot;&gt;GC: test&lt;/span&gt;
+&lt;br&gt;
+test &lt;span class=&quot;jade&quot; style=&quot;color: #c4118e; font-size: 30px;&quot;&gt;Jade: test&lt;/span&gt;
+&lt;br&gt;
+&lt;span class=&quot;jade&quot; style=&quot;color: #c4118e; font-size: 30px;&quot;&gt;Jade: &lt;a href=&quot;http://www.google.pl&quot; style=&quot;color: #11c47f&quot;&gt;Google&lt;/a&gt;&lt;/span&gt;
+&lt;br&gt;
+&lt;span class=&quot;jade&quot; style=&quot;color: #c4118e; font-size: 30px;&quot;&gt;Jade: &lt;a href=&quot;http://www.google.pl&quot;&gt;http://www.google.pl&lt;/a&gt;&lt;/span&gt;
+&lt;br&gt;
+&lt;span class=&quot;jade&quot; style=&quot;color: #c4118e; font-size: 30px;&quot;&gt;Jade: &lt;img src=&quot;madrala.png&quot; width=&quot;200&quot; height=&quot;100&quot;&gt;&lt;/span&gt;
+&lt;br&gt;
+&lt;span class=&quot;jade&quot; style=&quot;color: #c4118e; font-size: 30px;&quot;&gt;Jade: &lt;a href=&quot;https://homestuckproject.pl&quot;&gt;&lt;img src=&quot;trollcool.gif&quot;&gt;&lt;/a&gt;&lt;/span&gt;
+&lt;br&gt;
+&lt;h1&gt;TEST&lt;/h1&gt;/&gt;
+&lt;br&gt;
+&lt;span class=&quot;dave&quot;&gt;TG: &lt;span class=&quot;john&quot;&gt;f&amp;lt;&lt;span class=&quot;rose&quot;&gt;TT: y u play baby game y yu no shcut&lt;/span&gt;&amp;gt;de&lt;/span&gt;&lt;/span&gt;
+&lt;br&gt;
+&lt;span class=&quot;dave&quot;&gt;TG: &lt;/span&gt;
+&lt;br&gt;
+&lt;span class=&quot;dave&quot;&gt;TG: ts&lt;/span&gt;&amp;gt;
+&lt;br&gt;
+&lt;span class=&quot;scratch&quot; data-highlight&gt;testtestets&lt;/span&gt;</code></pre>
+    
+<p>Efekt końcowy:</p>
+
+<p>
+testtesttse
+<br>
+<span class="jade">GC: test</span>
+<br>
+test <span class="jade" style="color: #c4118e; font-size: 30px;">Jade: test</span>
+<br>
+<span class="jade" style="color: #c4118e; font-size: 30px;">Jade: <a href="http://www.google.pl" style="color: #11c47f">Google</a></span>
+<br>
+<span class="jade" style="color: #c4118e; font-size: 30px;">Jade: <a href="http://www.google.pl">http://www.google.pl</a></span>
+<br>
+<span class="jade" style="color: #c4118e; font-size: 30px;">Jade: <img src="madrala.png" width="200" height="100"></span>
+<br>
+<span class="jade" style="color: #c4118e; font-size: 30px;">Jade: <a href="https://homestuckproject.pl"><img src="trollcool.gif"></a></span>
+<br>
+<h1>TEST</h1>/>
+<br>
+<span class="dave">TG: <span class="john">f&lt;<span class="rose">TT: y u play baby game y yu no shcut</span>&gt;de</span></span>
+<br>
+<span class="dave">TG: </span>
+<br>
+<span class="dave">TG: ts</span>&gt;
+<br>
+<span class="scratch" data-highlight>testtestets</span> <span><sub>(To zostało podświetlone automatycznie)</sub></span>
+
+
+
+</p><script>document.querySelectorAll('[data-highlight]')[0].dataset.highlight="true"</script>
