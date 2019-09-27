@@ -1,0 +1,285 @@
+<html lang="pl-PL"><head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="icon" href="/static/favicon_16x16.ico" sizes="16x16">
+    <link rel="icon" href="/static/favicon_32x32.ico" sizes="32x32">
+    <link rel="icon" href="/static/favicon_48x48.ico" sizes="48x48">
+    <link rel="icon" href="/static/favicon_64x64.ico" sizes="64x64">
+    <link rel="apple-touch-icon" href="/static/iphone-icon.png">
+
+    <meta name="description" content="Tłumaczenie komiksu o pewnym chłopcu, który wraz z przyjaciółmi gra w pewną grę.">
+    <meta name="keywords" content="Homestuck, tłumaczenie, polska, pl, HS, 4/13, 13 kwietnia, 2009, John, Egbert, Rose, Lalonde, Jade, Harley, Dave, Strider, Trolle, Trole, Homestuck Project, Project, Projekt, Homestuck Projekt, Problem Sleuth, Jailbreak, Andrew, Hussie">
+
+    <title>Homestuck Project</title>
+    <link rel="stylesheet" href="https://use.typekit.net/kek1uwn.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="/static/css/style.css">
+    <link rel="stylesheet" href="/static/adminStyle.css">
+
+    <script src="/static/scripts/script.js"></script>
+    
+    <script src="/static/adminScripts.js"></script>
+    
+    <script src="/static/jquery-3.4.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    
+<link href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css" type="text/css" media="all" rel="stylesheet">
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+<script type="text/javascript" src="https://npmcdn.com/flatpickr@4.6.2/dist/l10n/pl.js"></script>
+<script src="/static/Sortable.min.js"></script>
+
+    <script>
+$(function () {
+  $('[data-toggle="tooltip"]').tooltip()
+})
+</script>
+
+    <!-- W3CSS -->
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    
+    <meta name="theme-color" content="#c6c6c6">
+</head>
+
+<body>
+    <header class="center admin-center pad-x-0">
+        <div>
+            
+                <div class="center bg-cl-light-gray flex-container" style="font-size: 16px; max-width: unset;">
+                    <p>Zalogowany jako Vlaska</p>
+                    <a href="/adminpanel/logout/">Wyloguj</a>
+                </div>
+            
+            <a href="javascript:void(0)" class="nav-btn pad-y-rg color-white" id="nav-btn" role="button">
+                <i class="fas fa-bars"></i>
+                <span>
+                    Menu
+                </span>
+            </a>
+            <nav class="color-white nav-bar-container" data-nav-state="closed" id="nav-bar-container">
+                <a href="javascript:void(0)" class="nav-btn pad-y-rg color-white" id="in-nav-btn" role="button">
+                    <i class="fas fa-times"></i>
+                    <span>
+                        Zamknij
+                    </span>
+                </a>
+                <ul class="nav-bar mar-t-rg-mb">
+                    <li class="candycorn"><a href="/" class="color-white">Strona domowa</a></li>
+                    <li class="separator"><a href="/archive/" class="color-green">Archiwum</a></li>
+                    <li class="candycorn"><a href="/info/" class="color-green">Info</a></li>
+                    <li class="separator"><a href="/map/" class="color-blue">Mapa</a></li>
+                    <li class="candycorn"><a href="/log/" class="color-blue">Log</a></li>
+                    
+                    <li class="candycorn"><a href="https://homestuck.bandcamp.com/" class="color-yellow" target="_blanc">Bandcamp</a></li>
+                    
+                    <li class="separator"><a href="/credits/" class="color-orange">Creditsy</a></li>
+                    <li><a href="/contact/" class="color-orange">KONTAKT</a></li>
+                </ul>
+            </nav>
+            <div class="" id="dim-container"></div>
+        </div>
+    </header>
+    <main class="center admin-center bg-cl-gray pad-t-md-nm pad-b-md">
+        
+<div class="w3-container bg-cl-light-gray">
+    <img src="/static/swf.svg" id="swf-mini" style="display: none">
+    <form id="page-form" class="container form-group" method="POST" style="text-align: left; font-weight: normal;" enctype="multipart/form-data" action="preview">
+        <input type="hidden" name="csrfmiddlewaretoken" value="zsgX5BsJkcfqY7TtvtDxEnFMy8Sk3R5Df8vfPl3Pnuv1UsUoYAiZwVKAY6J392LH">
+
+        <div class="d-flex flex-column flex-md-row justify-content-between" style="margin: 0 -15px -5px -15px;" disabled="">
+    <button class="btn btn-info mt-2" type="button">‹ Poprzednia strona</button>
+    <button class="btn btn-primary mt-2" type="button">Podgląd</button>
+    <button class="btn btn-info mt-2" type="button">Następna strona ›</button>
+</div>
+
+
+        <div class="page-settings">
+            <div class="baner" role="button" data-toggle="collapse" data-target="#page-settings-content" aria-expanded="true" aria-controls="page-settings-content">
+                Ustawienia
+            </div>
+            <div class="collapse show" id="page-settings-content">
+                <div class="row form-group">
+                    <label class="col-sm-2 col-form-label" for="id_page">Strona: </label>
+                    <input type="number" name="page" value="1" class="col-sm-2 form-control" min="1" required="" id="id_page">
+                </div>
+                
+                <div class="row form-group">
+                    <label class="col-sm-2 col-form-label" for="form.pub_date.id_for_label">Data i godzina publikacji:
+                    </label>
+                    <input type="text" name="pub_date" value="13.04.2019 01:26:25" class="col-xs-5 col-sm-5 col-lg-3 form-control date-picker flatpickr-input" style="align-self: center; background-color: white;" id="date-picker" data-input="" onchange="onDateChange(this);" required="" readonly="readonly"><input type="hidden" name="initial-pub_date" value="2019-04-13 01:26:25" id="initial-id_pub_date">
+                    <script>
+                        flatpickr('.date-picker', {
+                            locale: 'pl',
+                            enableTime: true,
+                            dateFormat: "d.m.Y H:i:S",
+                            time_24hr: true,
+                        });
+                    </script>
+                    <div class="d-flex flex-column flex-sm-row pt-2 pt-sm-0 pl-sm-3 align-items-start align-items-md-center display-block">
+                        <button type="button" class="btn btn-outline-secondary display-block" onclick="setTomorrow('#date-picker');">Jutro 12:00</button>
+                        <button type="button" class="btn btn-outline-secondary display-block mt-2 mt-sm-0 ml-sm-2" onclick="setLastDate('#date-picker')">Ostatnia data</button>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+
+        <div class="files">
+            <div class="baner" role="button" data-toggle="collapse" data-target="#files-content" aria-expanded="true" aria-controls="files-content">Pliki</div>
+            <input type="hidden" name="files-TOTAL_FORMS" value="1" id="id_files-TOTAL_FORMS"><input type="hidden" name="files-INITIAL_FORMS" value="1" id="id_files-INITIAL_FORMS"><input type="hidden" name="files-MIN_NUM_FORMS" value="0" id="id_files-MIN_NUM_FORMS"><input type="hidden" name="files-MAX_NUM_FORMS" value="1000" id="id_files-MAX_NUM_FORMS">
+            <div class="collapse show form-group" id="files-content">
+                
+                <div class="file-container row border rounded p-2" style="border-color: c6c6c6;">
+                    
+                    <div class="col-md-6 d-flex align-items-center justify-content-center px-0 pr-md-2">
+                        
+
+    <img class="img-menu" src="https://project-homestuck.s3.amazonaws.com/media/hs/images/00001.gif" style="max-width: 100%;">
+
+</div>
+                    <div class="col-md-6 form-group">
+                        <div class="row file-upload box mt-2 mt-md-0 mb-2" onmouseover="higlightLabel(this);" onmouseout="higlightLabel(this);" onclick="clickLabel(this);" data-target="id_files-0-image">
+                            
+                            <input type="file" class="inputfile" name="files-0-image" id="id_files-0-image" onchange="loadFilePreview(this);">
+                            <label class="col-form-label" for="id_files-0-image" onclick="labelClickEvent(event);"><strong>Wybierz plik</strong><span class="d-none d-md-inline"> lub
+                                    przeciągnij go tutaj</span>.</label>
+                            
+                            <img id="id_files-0-image-img">
+
+                            <span class="close-btn single-file-remove" aria-label="Delete" data-has-file="false" data-target="id_files-0-image" onclick="removeFile(event);">
+                            </span>
+                            
+                            <script>setupDragAndDrop("id_files-0-image");</script>
+                        </div>
+                        <div class="row">
+                            <div class="d-sm-flex" style="width: 100%;">
+                                <label class="col-sm-4 col-form-label pl-0" for="id_files-0-alt" data-toggle="tooltip" data-placement="top" title="" data-original-title="Stosowany tylko do plików flasha. Oczekiwana końcówka linku do wideo na YouTubie.">Alternatywny link: </label>
+                                <input type="text" name="files-0-alt" class="form-control col-sm-8" maxlength="30" id="id_files-0-alt">
+                            </div>
+                            <div style="width: 100%">
+                                <div class="d-flex justify-content-between pt-2">
+                                    <div class="form-check" style="align-self: center;">
+                                        <input type="checkbox" name="files-0-publish" class="form-check-input" id="id_files-0-publish" checked="">
+                                        <label class="form-check-label" for="id_files-0-publish">Widoczny
+                                            publicznie?</label>
+                                    </div>
+                                    <div class="form-check" style="align-self: center;">
+                                        <input class="form-check-input" type="checkbox" name="-DELETE" id="id_files-0-DELETE">
+                                        <label class="form-check-label" for="id_files-0-DELETE">Usuń</label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                </div>
+                
+                <div>
+                    <div class="outer-box mt-2">
+    <div class="new-files d-flex flex-wrap justify-content-around display-none" id="new-file-input-container">
+
+    </div>
+    <script>
+        new Sortable($('#new-file-input-container')[0], {
+            animation: 150,
+            ghostClass: 'file-drag-shadow',
+            easing: "cubic-bezier(1, 0, 0, 1)",
+        });
+    </script>
+    <div class="file-upload inner-box mt-2 mt-md-0" id="new-file-input-parent" onmouseover="higlightLabel(this);" onmouseout="higlightLabel(this);" onclick="clickLabel(this);" data-target="new-file-input">
+
+        <input type="file" class="inputfile" name="new-file-input" id="new-file-input" onchange="addFileToList(this);" multiple="" hidden="">
+        <label class="col-form-label" for="new-file-input" onclick="labelClickEvent(event);"><strong>Wybierz
+                plik</strong><span class="d-none d-md-inline"> lub
+                przeciągnij go tutaj</span>.</label>
+        <script>
+            setupDragAndDrop("new-file-input");
+        </script>
+    </div>
+</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="page-text">
+            <div class="baner" role="button" data-toggle="collapse" data-target="#page-text-content" aria-expanded="true" aria-controls="page-text-content">Tekst</div>
+            <div class="collapse show" id="page-text-content">
+                <div class="row form-group">
+                    <label class="col-sm-2 col-form-label" for="id_text">Tekst: </label>
+                    <textarea name="text" cols="40" rows="10" class="form-control col-sm-10" style="align-self: center;" id="id_text">Młody mężczyzna stoi w swoim pokoju. Tak się składa, że dzisiaj, 13 kwietnia 2009 roku, wypadają urodziny tego młodzieńca. Chociaż przyszedł na świat trzynaście lat temu, to właśnie dziś otrzyma on imię!
+&lt;br&gt;&lt;br&gt;
+Jak będzie brzmieć imię tego kawalera?</textarea>
+                </div>
+                
+                <div class="row form-group">
+                    <label class="col-sm-2 col-form-label" for="id_button">Przycisk: </label>
+                    <select name="button" class="form-control col-sm-2" style="align-self: center;" id="id_button">
+  <option value="" selected="">---------</option>
+
+  <option value="1">Pesterlog</option>
+
+</select>
+                </div>
+                <div class="row form-group">
+                    <label class="col-sm-2 col-form-label" for="id_pesterlog">Pesterlog: </label>
+                    <textarea name="pesterlog" cols="40" rows="10" class="form-control col-sm-10" style="align-self: center;" id="id_pesterlog"></textarea>
+                </div>
+                
+            </div>
+        </div>
+
+        <div class="commands">
+            <div class="baner" role="button" data-toggle="collapse" data-target="#commands-content" aria-expanded="true" aria-controls="commands-content">Komendy</div>
+            <input type="hidden" name="commands-TOTAL_FORMS" value="1" id="id_commands-TOTAL_FORMS"><input type="hidden" name="commands-INITIAL_FORMS" value="1" id="id_commands-INITIAL_FORMS"><input type="hidden" name="commands-MIN_NUM_FORMS" value="0" id="id_commands-MIN_NUM_FORMS"><input type="hidden" name="commands-MAX_NUM_FORMS" value="1000" id="id_commands-MAX_NUM_FORMS">
+            <div class="collapse show" id="commands-content">
+                
+                <div class="row form-group border rounded py-2" style="border-color: c6c6c6;">
+                    <div class="col-sm-4">
+                        <input type="text" name="commands-0-text" value="Wprowadź imię." class="form-control" placeholder="Tekst" style="align-self: center;" maxlength="300" id="id_commands-0-text">
+                    </div>
+                    <div class="col-sm-4 pt-2 pt-sm-0">
+                        <input type="text" name="commands-0-next_page" class="form-control" placeholder="Następna strona" style="align-self: center;" maxlength="100" id="id_commands-0-next_page">
+                    </div>
+                    <div class="col-sm-4 d-flex justify-content-between pt-2 pt-sm-0">
+                        <div class="form-check" style="align-self: center;">
+                            <input type="checkbox" name="commands-0-publish" class="form-check-input" id="id_commands-0-publish" checked="">
+                            <label class="form-check-label" for="id_commands-0-publish">Widoczny
+                                publicznie?</label>
+                        </div>
+                        <div class="form-check" style="align-self: center;">
+                            <input class="form-check-input" type="checkbox" name="commands-0-DELETE" id="id_commands-0-DELETE">
+                            <label class="form-check-label" for="id_commands-0-DELETE">Usuń</label>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+
+        <div class="d-flex flex-column-reverse flex-md-row align-items-start" style="margin: 0 -15px;">
+    <button type="button" class="btn btn-danger display-block mb-2 mb-md-0 mr-md-auto">Usuń</button>
+    <button type="button" class="btn btn-info display-block mb-2 mb-md-0 mr-md-2 ml-md-2">Zapisz i dodaj nową
+        stronę</button>
+    <button type="button" class="btn btn-info display-block mb-2 mb-md-0 mr-md-2">Zapisz i kontynuuj
+        edycję</button>
+    <button type="button" class="btn btn-primary display-block mb-2 mb-md-0">Zapisz</button>
+</div>
+    </form>
+</div>
+
+    </main><div class="flatpickr-calendar hasTime animate showTimeInput" tabindex="-1"><div class="flatpickr-months"><span class="flatpickr-prev-month"><svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 17 17"><g></g><path d="M5.207 8.471l7.146 7.147-0.707 0.707-7.853-7.854 7.854-7.853 0.707 0.707-7.147 7.146z"></path></svg></span><div class="flatpickr-month"><div class="flatpickr-current-month"><select class="flatpickr-monthDropdown-months" tabindex="-1"><option class="flatpickr-monthDropdown-month" value="0" tabindex="-1">Styczeń</option><option class="flatpickr-monthDropdown-month" value="1" tabindex="-1">Luty</option><option class="flatpickr-monthDropdown-month" value="2" tabindex="-1">Marzec</option><option class="flatpickr-monthDropdown-month" value="3" tabindex="-1">Kwiecień</option><option class="flatpickr-monthDropdown-month" value="4" tabindex="-1">Maj</option><option class="flatpickr-monthDropdown-month" value="5" tabindex="-1">Czerwiec</option><option class="flatpickr-monthDropdown-month" value="6" tabindex="-1">Lipiec</option><option class="flatpickr-monthDropdown-month" value="7" tabindex="-1">Sierpień</option><option class="flatpickr-monthDropdown-month" value="8" tabindex="-1">Wrzesień</option><option class="flatpickr-monthDropdown-month" value="9" tabindex="-1">Październik</option><option class="flatpickr-monthDropdown-month" value="10" tabindex="-1">Listopad</option><option class="flatpickr-monthDropdown-month" value="11" tabindex="-1">Grudzień</option></select><div class="numInputWrapper"><input class="numInput cur-year" type="number" tabindex="-1" aria-label="Year"><span class="arrowUp"></span><span class="arrowDown"></span></div></div></div><span class="flatpickr-next-month"><svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 17 17"><g></g><path d="M13.207 8.472l-7.854 7.854-0.707-0.707 7.146-7.146-7.146-7.148 0.707-0.707 7.854 7.854z"></path></svg></span></div><div class="flatpickr-innerContainer"><div class="flatpickr-rContainer"><div class="flatpickr-weekdays"><div class="flatpickr-weekdaycontainer">
+      <span class="flatpickr-weekday">
+        Pn</span><span class="flatpickr-weekday">Wt</span><span class="flatpickr-weekday">Śr</span><span class="flatpickr-weekday">Cz</span><span class="flatpickr-weekday">Pt</span><span class="flatpickr-weekday">So</span><span class="flatpickr-weekday">Nd
+      </span>
+      </div></div><div class="flatpickr-days" tabindex="-1"><div class="dayContainer"><span class="flatpickr-day " aria-label="Kwiecień 1, 2019" tabindex="-1">1</span><span class="flatpickr-day " aria-label="Kwiecień 2, 2019" tabindex="-1">2</span><span class="flatpickr-day " aria-label="Kwiecień 3, 2019" tabindex="-1">3</span><span class="flatpickr-day " aria-label="Kwiecień 4, 2019" tabindex="-1">4</span><span class="flatpickr-day " aria-label="Kwiecień 5, 2019" tabindex="-1">5</span><span class="flatpickr-day " aria-label="Kwiecień 6, 2019" tabindex="-1">6</span><span class="flatpickr-day " aria-label="Kwiecień 7, 2019" tabindex="-1">7</span><span class="flatpickr-day " aria-label="Kwiecień 8, 2019" tabindex="-1">8</span><span class="flatpickr-day " aria-label="Kwiecień 9, 2019" tabindex="-1">9</span><span class="flatpickr-day " aria-label="Kwiecień 10, 2019" tabindex="-1">10</span><span class="flatpickr-day " aria-label="Kwiecień 11, 2019" tabindex="-1">11</span><span class="flatpickr-day " aria-label="Kwiecień 12, 2019" tabindex="-1">12</span><span class="flatpickr-day selected" aria-label="Kwiecień 13, 2019" tabindex="-1">13</span><span class="flatpickr-day " aria-label="Kwiecień 14, 2019" tabindex="-1">14</span><span class="flatpickr-day " aria-label="Kwiecień 15, 2019" tabindex="-1">15</span><span class="flatpickr-day " aria-label="Kwiecień 16, 2019" tabindex="-1">16</span><span class="flatpickr-day " aria-label="Kwiecień 17, 2019" tabindex="-1">17</span><span class="flatpickr-day " aria-label="Kwiecień 18, 2019" tabindex="-1">18</span><span class="flatpickr-day " aria-label="Kwiecień 19, 2019" tabindex="-1">19</span><span class="flatpickr-day " aria-label="Kwiecień 20, 2019" tabindex="-1">20</span><span class="flatpickr-day " aria-label="Kwiecień 21, 2019" tabindex="-1">21</span><span class="flatpickr-day " aria-label="Kwiecień 22, 2019" tabindex="-1">22</span><span class="flatpickr-day " aria-label="Kwiecień 23, 2019" tabindex="-1">23</span><span class="flatpickr-day " aria-label="Kwiecień 24, 2019" tabindex="-1">24</span><span class="flatpickr-day " aria-label="Kwiecień 25, 2019" tabindex="-1">25</span><span class="flatpickr-day " aria-label="Kwiecień 26, 2019" tabindex="-1">26</span><span class="flatpickr-day " aria-label="Kwiecień 27, 2019" tabindex="-1">27</span><span class="flatpickr-day " aria-label="Kwiecień 28, 2019" tabindex="-1">28</span><span class="flatpickr-day " aria-label="Kwiecień 29, 2019" tabindex="-1">29</span><span class="flatpickr-day " aria-label="Kwiecień 30, 2019" tabindex="-1">30</span><span class="flatpickr-day nextMonthDay" aria-label="Maj 1, 2019" tabindex="-1">1</span><span class="flatpickr-day nextMonthDay" aria-label="Maj 2, 2019" tabindex="-1">2</span><span class="flatpickr-day nextMonthDay" aria-label="Maj 3, 2019" tabindex="-1">3</span><span class="flatpickr-day nextMonthDay" aria-label="Maj 4, 2019" tabindex="-1">4</span><span class="flatpickr-day nextMonthDay" aria-label="Maj 5, 2019" tabindex="-1">5</span><span class="flatpickr-day nextMonthDay" aria-label="Maj 6, 2019" tabindex="-1">6</span><span class="flatpickr-day nextMonthDay" aria-label="Maj 7, 2019" tabindex="-1">7</span><span class="flatpickr-day nextMonthDay" aria-label="Maj 8, 2019" tabindex="-1">8</span><span class="flatpickr-day nextMonthDay" aria-label="Maj 9, 2019" tabindex="-1">9</span><span class="flatpickr-day nextMonthDay" aria-label="Maj 10, 2019" tabindex="-1">10</span><span class="flatpickr-day nextMonthDay" aria-label="Maj 11, 2019" tabindex="-1">11</span><span class="flatpickr-day nextMonthDay" aria-label="Maj 12, 2019" tabindex="-1">12</span></div></div></div></div><div class="flatpickr-time time24hr" tabindex="-1"><div class="numInputWrapper"><input class="numInput flatpickr-hour" type="number" aria-label="Hour" tabindex="-1" step="1" min="0" max="23"><span class="arrowUp"></span><span class="arrowDown"></span></div><span class="flatpickr-time-separator">:</span><div class="numInputWrapper"><input class="numInput flatpickr-minute" type="number" aria-label="Minute" tabindex="-1" step="5" min="0" max="59"><span class="arrowUp"></span><span class="arrowDown"></span></div></div></div>
+    <footer class="center admin-center flex-container pad-t-md pg-footer">
+        <img src="/static/face.gif">
+        <p>©2019 Homestuck and VIZ Media</p>
+        <img src="/static/face.gif">
+    </footer>
+
+
+</body></html>
